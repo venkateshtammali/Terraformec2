@@ -25,3 +25,4 @@ resource "aws_eip" "example" {
 output "ip" {
   value = aws_eip.example.public_ip
 }
+terraform destroy
