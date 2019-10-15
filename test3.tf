@@ -1,6 +1,6 @@
 provider "aws" {
-  access_key = "AKIA53OV5HT2SZLJOOX6"
-  secret_key = "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"
+  access_key = "AKIA53OV5HT2SBJEDMWC"
+  secret_key = "SrhJdbikki4IAaT2WFuN5heDjicjulkimYppmnF0"
   region     = "ap-south-1"
 }
 
@@ -20,7 +20,7 @@ resource "aws_instance" "test" {
 
 resource "aws_eip" "example" {
   vpc = true
-  }
+  } 
 
 output "ip" {
   value = aws_eip.example.public_ip
