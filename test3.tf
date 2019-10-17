@@ -14,7 +14,7 @@ resource "aws_instance" "test" {
   instance_type = "t2.micro"
 
   tags = {
-    Name = "apty"
+    Name = "testing"
   }
 }
 
@@ -25,4 +25,3 @@ resource "aws_eip" "example" {
 output "ip" {
   value = aws_eip.example.public_ip
 }
-this is error code in terraform
