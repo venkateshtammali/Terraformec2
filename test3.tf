@@ -16,8 +16,9 @@ resource "aws_eip_association" "eip_assoc" {
 }
 
 resource "aws_instance" "example" {
-  ami = "${lookup(var.AMIS, var.AWS_REGION)}"
+  ami           = var.amis[var.region]
   instance_type = "t2.micro"
+}
 
   tags = {
     Name = "venkat"
