@@ -16,7 +16,7 @@ resource "aws_eip_association" "eip_assoc" {
 }
 
 resource "aws_instance" "example" {
-  ami           = var.amis[var.region]
+  ami           = var.amis[var.AWS_REGION]
   instance_type = "t2.micro"
 }
 
