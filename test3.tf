@@ -23,7 +23,7 @@ resource "aws_instance" "example" {
   tags = {
     Name = "venkat"
   }
-}
+
 
 resource "aws_eip" "example" {
   vpc = true
