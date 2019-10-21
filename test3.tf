@@ -14,11 +14,10 @@ resource "aws_eip_association" "eip_assoc" {
   instance_id   = "${aws_instance.example.id}"
   allocation_id = "${aws_eip.example.id}"
 }
-
 resource "aws_instance" "example" {
-  ami           = var.amis[var.AWS_REGION]
+  ami = "${lookup(var.AMIS, var.AWS_REGION)}"
   instance_type = "t2.micro"
-}
+  
 
 resource "aws_eip" "example" {
   vpc = true
