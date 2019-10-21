@@ -9,8 +9,8 @@ resource "aws_eip_association" "eip_assoc" {
   allocation_id = "${aws_eip.example.id}"
 }
 
-resource "aws_instance" "test" {
-  ami           = "ami-02913db388613c3e1"
+resource "aws_instance" "example" {
+  ami = "${lookup(var.AMIS, var.AWS_REGION)}"
   instance_type = "t2.micro"
 
   tags = {
