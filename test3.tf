@@ -20,11 +20,6 @@ resource "aws_instance" "example" {
   instance_type = "t2.micro"
 }
 
-  tags = {
-    Name = "venkat"
-  }
-
-
 resource "aws_eip" "example" {
   vpc = true
   } 
